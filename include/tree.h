@@ -42,16 +42,17 @@ class Tree {
     for (int i = 0; i < cur->list.size(); i++) {
       getelement(&cur->list[i], str);
     }
-    if (str.length() == root->list.size() && ncombinations == countcombinations - 1 && combinations.empty()) {
+    if (str.length() == root->list.size()
+        && ncombinations == countcombinations - 1 && combinations.empty()) {
       for (int i = 0; i < str.length(); i++) {
         combinations.push_back(str[i]);
       }
-    }
-    else if (str.length() == root->list.size()) {
+    } else if (str.length() == root->list.size()) {
       ncombinations += 1;
     }
     return str;
   }
+
  public:
   explicit Tree(std::vactor<char> vector) {
     root = new List;
