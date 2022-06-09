@@ -19,7 +19,7 @@ class Tree {
   std::vector<char> delelement(std::vector<char> arr, char value) {
     std::vector<char> extra;
     for (int i = 0; i < arr.size(); i++) {
-      if (!arr[i] == val) {
+      if (arr[i] != value) {
         extra.push_back(arr[i]);
       }
     }
@@ -27,16 +27,16 @@ class Tree {
   }
   std::vector<List> createList(std::vector<char> vec, List* head) {
     std::vector<List> pvec;
-    for (int i = 0; i < vec.sixe(); i++) {
+    for (int i = 0; i < vec.size(); i++) {
       List* p = new List;
       p->val = vec[i];
-      p->list = createList(delelement(vec, vec[i], p);
+      p->list = createList(delelement(vec, vec[i]), p);
       pvec.push_back(*p);
     }
     return pvec;
   }
   std::string getelement(List* cur, std::string str) {
-    if (!cur->val == 'o') {
+    if (cur->val != 'o') {
       str += cur->val;
     }
     for (int i = 0; i < cur->list.size(); i++) {
