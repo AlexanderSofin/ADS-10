@@ -25,12 +25,12 @@ class Tree {
     }
     return extra;
   }
-  std::vector<List> createList(str::vector<char> vector, List* head) {
+  std::vector<List> createList(std::vector<char> vec, List* head) {
     std::vector<List> pvec;
-    for (int i = 0; i < vector.sixe(); i++) {
+    for (int i = 0; i < vec.sixe(); i++) {
       List* p = new List;
-      p->val = vector[i];
-      p->list = createList(delelement(vector, vector[i], p);
+      p->val = vec[i];
+      p->list = createList(delelement(vec, vec[i], p);
       pvec.push_back(*p);
     }
     return pvec;
@@ -54,10 +54,10 @@ class Tree {
   }
 
  public:
-  explicit Tree(std::vactor<char> vector) {
+  explicit Tree(std::vector<char> vec) {
     root = new List;
     root->val = 'o';
-    root->list = createList(vector, root);
+    root->list = createList(vec, root);
   }
   std::vector<char> getPerm(int n) {
     countcombinations = n;
@@ -65,7 +65,7 @@ class Tree {
     std::vector<char> result = combinations;
     combinations.clear();
     ncombinations = 0;
-    return result
+    return result;
   }
 };
 #endif  // INCLUDE_TREE_H_
